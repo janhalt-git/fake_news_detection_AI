@@ -35,7 +35,7 @@ def analyze(req: AnalyzeRequest):
             source_prior = src.bayes_prior_truth
 
         # Claims + evidence + text consistency
-        from clients.claims_client import extract_claims_and_evidence
+        from .clients.claims_client import extract_claims_and_evidence
         ce = extract_claims_and_evidence(article.clean_text or "")
 
         text_consistency = float(ce.get("text_consistency", 0.5))
