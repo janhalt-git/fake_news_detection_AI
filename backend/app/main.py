@@ -1,4 +1,5 @@
 # app/main.py
+import logging
 from fastapi import FastAPI, HTTPException
 from sqlmodel import SQLModel, Session, create_engine
 
@@ -8,6 +9,9 @@ from .storage import get_or_seed_source
 from .fusion import combine_confidence
 from .models import Article, Claim, Evidence, Verification
 
+# Configure logging to show DEBUG level
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 engine = create_engine("sqlite:///./verifier.db", echo=False)
 SQLModel.metadata.create_all(engine)
