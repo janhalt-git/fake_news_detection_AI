@@ -1,5 +1,7 @@
 # app/main.py
+import logging
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import SQLModel, Session, create_engine
 
 from .schema import AnalyzeRequest, AnalyzeResponse, ClaimOut, EvidenceOut
@@ -8,11 +10,23 @@ from .storage import get_or_seed_source
 from .fusion import combine_confidence
 from .models import Article, Claim, Evidence, Verification
 
+# Configure logging to show DEBUG level
+logging.basicConfig(level=logging.DEBUG)
+logger = logging.getLogger(__name__)
 
 engine = create_engine("sqlite:///./verifier.db", echo=False)
 SQLModel.metadata.create_all(engine)
 
 app = FastAPI(title="FakeNews Verifier API")
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins (you can restrict this to specific domains later)
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
 
 @app.post("/analyze", response_model=AnalyzeResponse)
 def analyze(req: AnalyzeRequest):
@@ -41,8 +55,15 @@ def analyze(req: AnalyzeRequest):
         text_consistency = float(ce.get("text_consistency", 0.5))
         cross_reference = float(ce.get("cross_reference", 0.0))
 
-        # Fusion
-        combined, explanation = combine_confidence(source_prior, text_consistency, cross_reference)
+        # Check if no cross-references found
+        if cross_reference == 0.0:
+            combined = -1.0
+            explanation = "Insufficient data: No fact-check cross-references found for any claims."
+            verdict = "Insufficient data"
+        else:
+            # Fusion
+            combined, explanation = combine_confidence(source_prior, text_consistency, cross_reference)
+            verdict = "Likely true" if combined>=0.7 else ("Uncertain" if combined>=0.45 else "Likely misleading")
 
         # Persist minimal
         ver = Verification(article_id=article.id, source_prior=source_prior,
@@ -64,8 +85,6 @@ def analyze(req: AnalyzeRequest):
             claims_out.append(ClaimOut(text=c["text"],
                                        start_char=c.get("start_char"), end_char=c.get("end_char"),
                                        evidences=ev_outs))
-
-        verdict = "Likely true" if combined>=0.7 else ("Uncertain" if combined>=0.45 else "Likely misleading")
 
         return AnalyzeResponse(
             domain=article.domain, source_prior=source_prior,

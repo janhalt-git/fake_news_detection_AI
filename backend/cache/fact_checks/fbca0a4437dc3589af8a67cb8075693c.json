@@ -1,0 +1,83 @@
+{
+  "timestamp": "2025-12-04T17:19:57.710083",
+  "claim": "The COVID-19 pandemic is caused by 5G wireless technology.|all",
+  "results": [
+    {
+      "statement": "5G WiFi networks could be responsible for the rapid spread of the new coronavirus.",
+      "truth_rating": "this is not true. there is no evidence that 5g wifi networks are linked to the new coronavirus.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/health/5G-not-accelerating-coronavirus/",
+      "snippet": "5G WiFi networks could be responsible for the rapid spread of the new coronavirus.",
+      "publish_date": "2020-03-31",
+      "claimant": ""
+    },
+    {
+      "statement": "The new coronavirus is actually the impact of 5G exposure.",
+      "truth_rating": "this is incorrect, the new coronavirus is a virus and there is no evidence that 5g is harmful to people\u2019s health.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "The new coronavirus is actually the impact of 5G exposure.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "China was the first place to have over 100,000 5G towers.",
+      "truth_rating": "while it is true that china has over 100,000 towers, it is unclear if it was the first place to pass this number.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "China was the first place to have over 100,000 5G towers.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "Bill Gates created the new coronavirus and a vaccine for it.",
+      "truth_rating": "this is incorrect. the bill gates and melinda gates foundation has funded a research institute that has a patent to a different coronavirus.  coronavirus is a large category of viruses that includes the common cold, sars and the new virus that causes covid-19.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "Bill Gates created the new coronavirus and a vaccine for it.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "Symptoms of Covid-19 include nausea, hair loss, bone marrow damage.",
+      "truth_rating": "this is incorrect. symptoms have been reported as including fever, coughing and shortness of breath.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "Symptoms of Covid-19 include nausea, hair loss, bone marrow damage.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "5G is harmful to humans.",
+      "truth_rating": "there is no evidence that 5g can harm people.",
+      "truth_score": 0.5,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "5G is harmful to humans.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "Covid-19 vaccines contain Marburg virus which will be activated by 5G.",
+      "truth_rating": "there is no evidence for marburg virus being in the covid vaccines. 5g does not cause viral illnesses.",
+      "truth_score": 0.5,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/health/marburg-covid-vaccines/",
+      "snippet": "Covid-19 vaccines contain Marburg virus which will be activated by 5G.",
+      "publish_date": "2023-04-06",
+      "claimant": ""
+    }
+  ]
+}
