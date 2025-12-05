@@ -1,0 +1,94 @@
+{
+  "timestamp": "2025-12-04T17:25:46.160339",
+  "claim": "5G towers spread coronavirus.|all",
+  "results": [
+    {
+      "statement": "The EG.5 variant of Covid-19 is a new 5G virus.",
+      "truth_rating": "this is not true. covid-19 is caused by the sars-cov-2 virus. the 5g network uses radio waves that do not harm people\u2019s health.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/health/eg5-covid-not-connected-5g/",
+      "snippet": "The EG.5 variant of Covid-19 is a new 5G virus.",
+      "publish_date": "2023-08-23",
+      "claimant": ""
+    },
+    {
+      "statement": "Bill Gates created the new coronavirus and a vaccine for it.",
+      "truth_rating": "this is incorrect. the bill gates and melinda gates foundation has funded a research institute that has a patent to a different coronavirus.  coronavirus is a large category of viruses that includes the common cold, sars and the new virus that causes covid-19.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "Bill Gates created the new coronavirus and a vaccine for it.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "China was the first place to have over 100,000 5G towers.",
+      "truth_rating": "while it is true that china has over 100,000 towers, it is unclear if it was the first place to pass this number.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "China was the first place to have over 100,000 5G towers.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "The new coronavirus is actually the impact of 5G exposure.",
+      "truth_rating": "this is incorrect, the new coronavirus is a virus and there is no evidence that 5g is harmful to people\u2019s health.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "The new coronavirus is actually the impact of 5G exposure.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "Symptoms of Covid-19 include nausea, hair loss, bone marrow damage.",
+      "truth_rating": "this is incorrect. symptoms have been reported as including fever, coughing and shortness of breath.",
+      "truth_score": 0.95,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "Symptoms of Covid-19 include nausea, hair loss, bone marrow damage.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "5G is harmful to humans.",
+      "truth_rating": "there is no evidence that 5g can harm people.",
+      "truth_score": 0.5,
+      "publisher": "Full Fact",
+      "publisher_site": "fullfact.org",
+      "source_url": "https://fullfact.org/online/coronavirus-5G/",
+      "snippet": "5G is harmful to humans.",
+      "publish_date": "2020-03-13",
+      "claimant": ""
+    },
+    {
+      "statement": "A video shows people in China tearing down a 5G tower in an attempt to stop the spread of COVID-19 coronavirus disease.",
+      "truth_rating": "miscaptioned",
+      "truth_score": 0.5,
+      "publisher": "Snopes",
+      "publisher_site": "snopes.com",
+      "source_url": "https://www.snopes.com/fact-check/5g-tower-torn-down-china-covid/",
+      "snippet": "A video shows people in China tearing down a 5G tower in an attempt to stop the spread of COVID-19 coronavirus disease.",
+      "publish_date": "2020-04-02",
+      "claimant": ""
+    },
+    {
+      "statement": "A video shows a piece of 5G equipment with \"COV-19\" inscribed on it.",
+      "truth_rating": "false",
+      "truth_score": 0.05,
+      "publisher": "Snopes",
+      "publisher_site": "snopes.com",
+      "source_url": "https://www.snopes.com/fact-check/cov-19-inscribed-on-5g-board/",
+      "snippet": "A video shows a piece of 5G equipment with \"COV-19\" inscribed on it.",
+      "publish_date": "2020-05-19",
+      "claimant": ""
+    }
+  ]
+}

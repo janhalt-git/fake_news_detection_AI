@@ -3,7 +3,7 @@ import logging
 from typing import List, Dict, Any
 from ..config import settings
 from .llm_client import LLMClient
-from .politifact_client import CrossReferenceAdapter
+from .google_factcheck_client import CrossReferenceAdapter
 from ..prompts import CLAIM_EXTRACTION_PROMPT, STANCE_DETECTION_PROMPT, SIMILARITY_SCORING_PROMPT
 
 
@@ -25,7 +25,7 @@ def get_llm_client() -> LLMClient:
 def get_cross_reference_adapter() -> CrossReferenceAdapter:
     global _cross_reference_adapter
     if _cross_reference_adapter is None:
-        _cross_reference_adapter = CrossReferenceAdapter()
+        _cross_reference_adapter = CrossReferenceAdapter(api_key=settings.google_factcheck_api_key)
     return _cross_reference_adapter
 
 def extract_claims_and_evidence(text:str) -> Dict[str, Any]:
