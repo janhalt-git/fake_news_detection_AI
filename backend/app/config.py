@@ -5,6 +5,8 @@ class Settings(BaseSettings):
     llm_provider: str = "gemini"
     llm_model: str = "gemini-2.0-flash"
     gemini_api_key: Optional[str] = None
+    google_factcheck_api_key: Optional[str] = None
+    log_llm_calls: bool = True
     
     class Config:
         env_file = ".env"

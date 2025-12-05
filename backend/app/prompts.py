@@ -1,9 +1,10 @@
-CLAIM_EXTRACTION_PROMPT = """You are a helpful assistant that extracts factual claims from news articles.
+CLAIM_EXTRACTION_PROMPT = """You are a helpful assistant that extracts factual claims from the given url or text.
 
 A "claim" is a statement that makes a factual assertion about reality. 
 - Include specific numbers, statistics, dates, attributions
-- Exclude opinions, predictions, editorial comments
-- Exclude questions
+- Include opinions, predictions
+- Include questions
+- Exclude editorial comments, common knowledge
 
 Text: "{text}"
 
@@ -11,10 +12,11 @@ EXAMPLES OF WHAT TO EXTRACT:
 - "The vaccine was developed in 6 months" (specific timeframe)
 - "Masks reduce transmission by 50%" (quantified assertion)
 - "According to WHO, COVID originated in 2019" (attributed claim)
-
-EXAMPLES OF WHAT NOT TO EXTRACT:
 - "I believe the vaccine is safe" (opinion)
 - "Will inflation improve next year?" (question/prediction)
+
+EXAMPLES OF WHAT NOT TO EXTRACT:
+- "The sky is blue" (common knowledge)
 - "This is an important discovery" (editorial comment)
 
 Return ONLY a valid JSON array (no markdown, no explanation):
@@ -28,7 +30,7 @@ Return ONLY a valid JSON array (no markdown, no explanation):
   ...
 ]
 
-If no claims found, return: []
+If no claims found, return: This claim seems to be an opinion or does not contain factual assertions.
 """
 
 STANCE_DETECTION_PROMPT = """You are a helpful assistant that determines the stance of a claim based on provided evidence.
