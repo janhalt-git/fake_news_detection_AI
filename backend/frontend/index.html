@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fake News Verifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- CSS served by FastAPI at /static -->
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Fake News Verifier</div>
+    <div id="status" class="pill pill-warn">Idle</div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Analyze a News Article</h2>
+      <p class="muted">Paste a news URL or article text to verify authenticity.</p>
+
+      <textarea id="urlBox" placeholder="Paste a news URL here..."></textarea>
+
+      <textarea id="textBox" placeholder="Or paste raw article text..."></textarea>
+
+      <div class="actions">
+        <button id="analyzeBtn" class="btn">Analyze</button>
+        <button id="clearBtn" class="btn btn-ghost">Clear</button>
+      </div>
+
+      <div id="error" class="error" hidden></div>
+    </section>
+
+    <section class="panel">
+      <h2>Analysis Result</h2>
+      <pre id="resultBox" class="codeblock">No analysis yet.</pre>
+    </section>
+  </main>
+
+  <!-- JS served by FastAPI at /static -->
+  <script src="/static/script.js"></script>
+</body>
+</html>

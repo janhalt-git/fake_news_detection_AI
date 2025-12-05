@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #0a0f1f;
+  color: #e5e7eb;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.pill {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.pill-warn { background: rgba(234,179,8,0.12); color: #eab308; }
+.pill-ok   { background: rgba(34,197,94,0.12); color: #22c55e; }
+.pill-error{ background: rgba(239,68,68,0.12); color: #ef4444; }
+
+.container {
+  max-width: 960px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel {
+  background: #0a0f1f;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid #1e293b;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  background: #020617;
+  border: 1px solid #334155;
+  color: #e5e7eb;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #38bdf8;
+  outline: none;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  background: #38bdf8;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+.btn-ghost {
+  border: 1px solid #475569;
+  background: transparent;
+  color: #e5e7eb;
+}
+
+.error {
+  margin-top: 0.5rem;
+  color: #f87171;
+}
+
+.codeblock {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  max-height: 480px;
+  overflow-y: auto;
+}
