@@ -1,10 +1,17 @@
 # app/schema.py
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, HttpUrl, field_validator
 from typing import List, Optional
 
 class AnalyzeRequest(BaseModel):
     url: Optional[HttpUrl] = None
     text: Optional[str] = None
+
+    @field_validator('url', mode='before')
+    @classmethod
+    def empty_str_to_none(cls, v):
+        if v == '':
+            return None
+        return v
 
 class EvidenceOut(BaseModel):
     type: str
